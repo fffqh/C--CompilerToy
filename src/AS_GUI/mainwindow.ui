@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1306</width>
+    <height>926</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(247, 255, 244);</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTableView" name="tbv_ActionGoto">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>360</y>
+      <width>691</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:1px solid green;
+
+</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>20</y>
+      <width>551</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="accessibleName">
+      <string/>
+     </property>
+     <attribute name="title">
+      <string>语法分析栈</string>
+     </attribute>
+     <widget class="QTableView" name="tbv_result">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>541</width>
+        <height>611</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid green;
+
+</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>语法分析树</string>
+     </attribute>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>541</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>539</width>
+         <height>589</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="lb_tree_img">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="bnt_img_up">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>590</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-color:green;
+border-width: 1px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>放大</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bnt_img_dw">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>590</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-color:green;
+border-width: 1px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>缩小</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bnt_img_rst">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>590</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-color:green;
+border-width: 1px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>reset</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bnt_img_open">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>590</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-color:green;
+border-width: 1px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}
+</string>
+      </property>
+      <property name="text">
+       <string> 打开图片文件</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>生成可执行汇编代码</string>
+     </attribute>
+     <widget class="QPushButton" name="bnt_start_as">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-color:green;
+border-width: 2px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>生成汇编代码</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="txt_mips">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>511</width>
+        <height>231</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="stacked_w">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>300</y>
+        <width>391</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="lst_cb">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>300</y>
+        <width>111</width>
+        <height>301</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bnt_copy">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>10</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-color:green;
+border-width: 2px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>复制代码到剪贴板</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>151</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>操作台</string>
+    </property>
+    <widget class="QPushButton" name="bnt_load_file">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-color:green;
+border-width: 2px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}</string>
+     </property>
+     <property name="text">
+      <string>从文件导入
+源文件</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bnt_start">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-color:green;
+border-width: 2px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}</string>
+     </property>
+     <property name="text">
+      <string> 开始语法分析</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bnt_showlr">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>260</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-color:green;
+border-width: 2px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}</string>
+     </property>
+     <property name="text">
+      <string> 查看当前文法</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bnt_reset">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-color:green;
+border-width: 2px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}</string>
+     </property>
+     <property name="text">
+      <string>重置</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bnt_showfile">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-color:green;
+border-width: 2px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}</string>
+     </property>
+     <property name="text">
+      <string> 查看源文件</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bnt_load_gplst">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-color:green;
+border-width: 2px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}</string>
+     </property>
+     <property name="text">
+      <string>从文件导入
+文法文件</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="lb_file_path">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>20</y>
+      <width>531</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>未导入源文件...</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>330</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> 符号表</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>330</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> 文法产生式表</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>660</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>正规 LR 语法分析表</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>670</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>LR1 语法分析结果</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>690</y>
+      <width>1271</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>日志输出</string>
+    </property>
+    <widget class="QTextBrowser" name="txt_info">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>1091</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(246, 255, 251);
+border:1px solid green;
+
+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bnt_clear_info">
+     <property name="geometry">
+      <rect>
+       <x>1130</x>
+       <y>20</y>
+       <width>121</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-color:green;
+border-width: 2px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>清空日志面板</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bnt_open_infodir">
+     <property name="geometry">
+      <rect>
+       <x>1130</x>
+       <y>100</y>
+       <width>121</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-color:green;
+border-width: 2px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>打开日志文件
+所在文件夹</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bnt_showinfo">
+     <property name="geometry">
+      <rect>
+       <x>1130</x>
+       <y>60</y>
+       <width>121</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-color:green;
+border-width: 2px;
+border-style: solid;
+selection-color: rgb(107, 170, 128);
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	border-color: green;
+    background-color: rgb(217, 255, 200);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>查看日志文件</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTextBrowser" name="txt_tokenlst">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>50</y>
+      <width>231</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:1px solid green;
+
+</string>
+    </property>
+    <property name="tabStopWidth">
+     <number>40</number>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="txt_GPlst">
+    <property name="geometry">
+     <rect>
+      <x>405</x>
+      <y>50</y>
+      <width>291</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:1px solid green;
+
+</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1306</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,70 @@
+S0       S              
+S        Program        
+Program  F              
+Program  F  Fcs 		
+Fcs      F 				
+Fcs      F  Fcs        	
+F        T  [标识符]    [左括号]  BM   [右括号]    B	          
+F        T  [标识符]    [左括号]    Args    AM  BM   [右括号]   B	      
+AM            
+BM                     
+Args     T  [标识符]   
+Args     T  [标识符]  [逗号分割符]  Args        
+T        [关键字int]						
+T        [关键字float]						
+T        [关键字void]						
+B	     [左大括号]	B1	B2	[右大括号]		
+B 	     [左大括号]	B2	[右大括号]			
+B1 	     V	  B1					
+B1 	     V 					 
+V 	     [关键字int]	 [标识符]	[界符]				
+V 	     [关键字float]   [标识符]	[界符]				
+V        [关键字int]     [标识符]  Array  [界符]
+V        [关键字float]   [标识符]  Array  [界符]
+Array    [左中括号]  [数值]  [右中括号]  Array
+Array    [左中括号]  [数值]  [右中括号]
+B2 	     G						
+B2 	     G  KM  B2 					    
+G 	     G=						        
+G 	     Greturn						
+G 	     Gwhile						    
+G 	     Gif						    
+G= 	     [标识符]	[赋值号]	E	[界符]		
+G= 	     [标识符]   Array	   [赋值号]	  E	 [界符]						
+Greturn  [关键字return]	 [界符]					
+Greturn  [关键字return]	 E	[界符]				
+Gwhile 	 [关键字while]  [左括号]	 KM  E  [右括号]  KM  B	 	
+Gif 	 [关键字if]	    [左括号]	     E	[右括号]  KM  B	 	
+Gif 	 [关键字if]	    [左括号]	     E	[右括号]  KM  B  KN [关键字else] KM  B    
+KM  
+KN  
+E 	     A						
+E 	     A	A+					
+A+ 	     relop	A					
+A+ 	     relop	A	A+				
+A 	     M						
+A 	     M	M+					
+M+ 	     [算符+]	M					
+M+ 	     [算符+]	M	M+				
+M+ 	     [算符-]	M					
+M+ 	     [算符-]	M	M+				
+M 	     N  	
+M 	     N	N+	
+N+ 	     [算符*]	N				
+N+ 	     [算符*]	N	N+			
+N+ 	     [算符/]	N				
+N+ 	     [算符/]	N	N+			
+N 	     [标识符]							
+N 	     [数值]						    	
+N 	     [标识符]  Array					
+N 	     [左括号]	E	[右括号]				
+N        [标识符]  [左括号]  [右括号]			
+N        [标识符]  [左括号]  Ids  [右括号]	    
+Ids      E		
+Ids      E  [逗号分割符]  Ids		   
+relop 	 [算符==]	        
+relop 	 [算符!=]           
+relop 	 [算符<] 	        
+relop 	 [算符<=] 			
+relop 	 [算符>] 	        
+relop 	 [算符>=]	        
